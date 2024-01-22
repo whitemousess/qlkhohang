@@ -24,7 +24,9 @@ const StoredLocation = () => {
   const totalWeightPerPosition = 100;
 
   const getDataByLocation = (location) => {
-    return dataStored.filter((item) => item.location === location);
+    return dataStored.filter(
+      (item) => item.location === location && item.status === 0
+    );
   };
 
   const calculateTotalWeightByLocation = (location) => {
